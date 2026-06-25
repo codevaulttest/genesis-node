@@ -41,6 +41,12 @@ export function useWallet() {
   const connect = useCallback(async () => {
     setError(null);
     if (!window.ethereum) {
+      // On mobile, redirect into MetaMask's in-app browser which injects window.ethereum
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = `https://metamask.app.link/dapp/${window.location.host}${window.location.pathname}`;
+        return;
+      }
       setError('请先安装加密钱包（如 MetaMask）');
       return;
     }
