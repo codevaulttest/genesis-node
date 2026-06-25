@@ -98,34 +98,36 @@ export default function App() {
 
       <main className="main">
         {!effectiveLoading && (
-          <>
-            <ClaimPanel
-              canClaim={nodes.canClaim}
-              isSoldOut={nodes.isSoldOut}
-              userIndex={nodes.userAllocation?.index ?? null}
-              walletConnected={!!effectiveAddress}
-              nextIndex={nodes.nextIndex}
-              claimStatus={claimStatus}
-              refreshing={nodes.refreshing}
-              onClaimClick={openClaim}
-              onConnect={wallet.connect}
-              onRefresh={nodes.refresh}
-            />
-
-            <NodeGrid
-              allocations={nodes.allocations}
-              walletAddress={effectiveAddress}
-              userIndex={nodes.userAllocation?.index ?? null}
-              nextIndex={nodes.nextIndex}
-              isSoldOut={nodes.isSoldOut}
-              selectedIndex={selectedIndex}
-              onSelect={(index) =>
-                setSelectedIndex((prev) => (prev === index ? null : index))
-              }
-            />
-          </>
+          <ClaimPanel
+            canClaim={nodes.canClaim}
+            isSoldOut={nodes.isSoldOut}
+            userIndex={nodes.userAllocation?.index ?? null}
+            walletConnected={!!effectiveAddress}
+            nextIndex={nodes.nextIndex}
+            claimStatus={claimStatus}
+            refreshing={nodes.refreshing}
+            onClaimClick={openClaim}
+            onConnect={wallet.connect}
+            onRefresh={nodes.refresh}
+          />
         )}
       </main>
+
+      {!effectiveLoading && (
+        <div className="node-grid-band">
+          <NodeGrid
+            allocations={nodes.allocations}
+            walletAddress={effectiveAddress}
+            userIndex={nodes.userAllocation?.index ?? null}
+            nextIndex={nodes.nextIndex}
+            isSoldOut={nodes.isSoldOut}
+            selectedIndex={selectedIndex}
+            onSelect={(index) =>
+              setSelectedIndex((prev) => (prev === index ? null : index))
+            }
+          />
+        </div>
+      )}
 
       {selectedIndex !== null && (
         <NodeDetailPanel

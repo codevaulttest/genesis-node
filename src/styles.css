@@ -826,6 +826,13 @@ button.nav-network {
   color: var(--colors-ink);
 }
 
+/* ── node-grid-band ── */
+
+.node-grid-band {
+  background: var(--colors-surface-soft);
+  padding: var(--spacing-xl) var(--spacing-base) var(--spacing-xxl);
+}
+
 /* ── legal-band ── */
 
 .legal-band {
