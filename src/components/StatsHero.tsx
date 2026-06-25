@@ -14,7 +14,7 @@ export function StatsHero({ claimedCount, nextIndex, isSoldOut, userIndex }: Pro
     <section className="hero-band-dark" aria-label="创世节点">
       <h1 className="display-title">知识宇宙 · 创世节点</h1>
       <p className="body-md">
-        属于您的创世编号，等您来定。全球仅限 {TOTAL_NODES} 个。
+        按付款顺序永久分配，全球限 {TOTAL_NODES} 席。
       </p>
 
       <div className="product-ui-card-dark">

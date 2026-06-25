@@ -29,14 +29,14 @@ export function ClaimPanel({
   const busy = claimStatus === 'pending' || claimStatus === 'confirming';
 
   let title = `加入 #${nextIndex} 号创世节点`;
-  let body = `支付 ${NODE_PRICE_USDT.toLocaleString()} USDT，获得该编号`;
+  let body = `支付 ${NODE_PRICE_USDT.toLocaleString()} USDT，永久拥有 #${nextIndex} 号创世席位`;
   let primaryLabel = '立即加入';
   let onPrimary = onClaimClick;
   let primaryDisabled = !canClaim || busy;
 
   if (userIndex !== null) {
     title = `您已拥有创世节点 #${userIndex}`;
-    body = '每个钱包只能加入 1 个，无法重复购买。';
+    body = '每个钱包限 1 个名额。';
     primaryLabel = '';
     onPrimary = () => {};
     primaryDisabled = true;

@@ -66,7 +66,7 @@ export function NodeDetailPanel({
                 </dd>
               </div>
               <div className="detail-list__row">
-                <dt className="detail-list__label">付款记录</dt>
+                <dt className="detail-list__label">链上凭证</dt>
                 <dd className="detail-list__value">
                   <a href={bscscanTxUrl(allocation.txHash)} target="_blank" rel="noreferrer">
                     {shortenAddress(allocation.txHash, 8, 6)}

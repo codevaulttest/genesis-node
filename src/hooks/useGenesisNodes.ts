@@ -68,7 +68,7 @@ export function useGenesisNodes(walletAddress: `0x${string}` | null) {
         await new Promise((r) => setTimeout(r, 1200));
         setClaimStatus('confirming');
         const result = addDemoAllocation(walletAddress);
-        if (!result) throw new Error('创世节点已全部加入，请稍后再试');
+        if (!result) throw new Error('创世节点 100 个名额已全部售出');
         await load(true);
         setClaimStatus('success');
         return;
