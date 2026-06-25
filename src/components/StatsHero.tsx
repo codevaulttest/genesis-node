@@ -28,7 +28,7 @@ export function StatsHero({ claimedCount, nextIndex, isSoldOut, userIndex }: Pro
         <div className="stat-row">
           <span className="stat-row__label">{isSoldOut ? '状态' : '下一个号码'}</span>
           <span className="stat-row__value stat-row__value--up">
-            {isSoldOut ? '已全部加入' : `#${nextIndex}`}
+            {isSoldOut ? '已全部售出' : `#${nextIndex}`}
           </span>
         </div>
         <div className="stat-row">
@@ -36,7 +36,7 @@ export function StatsHero({ claimedCount, nextIndex, isSoldOut, userIndex }: Pro
           <span className="stat-row__value">{remaining}</span>
         </div>
         <div className="stat-row">
-          <span className="stat-row__label">加入费用</span>
+          <span className="stat-row__label">认购费用</span>
           <span className="stat-row__value">
             {NODE_PRICE_USDT.toLocaleString()} USDT
           </span>
@@ -52,7 +52,7 @@ export function StatsHero({ claimedCount, nextIndex, isSoldOut, userIndex }: Pro
 
       {isSoldOut && (
         <div className="status-banner status-banner--soldout" role="status">
-          100 个名额已全部加入
+          100 个名额已全部售出
         </div>
       )}
     </section>

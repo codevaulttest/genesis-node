@@ -38,7 +38,7 @@ export function ClaimModal({
       >
         <div className="modal-sheet__head">
           <h2 id="claim-modal-title" className="modal-sheet__title">
-            加入创世节点 #{nextIndex}
+            认购创世节点 #{nextIndex}
           </h2>
           <button
             type="button"
@@ -78,7 +78,7 @@ export function ClaimModal({
               <div className="tips-banner" role="note">
                 <Info size={16} className="tips-banner__icon" aria-hidden />
                 <span>
-                  每个钱包只能加入 1 个创世节点，按付款先后顺序编号，共 {TOTAL_NODES} 个名额。
+                  每个钱包只能认购 1 个创世节点，按付款先后顺序编号，共 {TOTAL_NODES} 个名额。
                 </span>
               </div>
 

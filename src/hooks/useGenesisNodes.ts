@@ -86,7 +86,7 @@ export function useGenesisNodes(walletAddress: `0x${string}` | null) {
       await load(true);
       setClaimStatus('success');
     } catch (err) {
-      setClaimError(err instanceof Error ? err.message : '加入失败，请重试');
+      setClaimError(err instanceof Error ? err.message : '认购失败，请重试');
       setClaimStatus('error');
     }
   }, [walletAddress, userAllocation, isSoldOut, load]);

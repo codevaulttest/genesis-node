@@ -48,9 +48,9 @@ export function NodeGrid({
           <CheckCircle2 size={28} className="grid-complete-card__icon" aria-hidden />
           <div>
             <strong className="grid-complete-card__title">
-              {TOTAL_NODES} / {TOTAL_NODES} 已全部加入
+              {TOTAL_NODES} / {TOTAL_NODES} 已全部售出
             </strong>
-            <p className="grid-complete-card__body">名额已满，以下是全部创世成员。</p>
+            <p className="grid-complete-card__body">名额已全部售出，以下是全部创世成员。</p>
           </div>
         </div>
       )}

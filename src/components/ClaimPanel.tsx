@@ -28,9 +28,9 @@ export function ClaimPanel({
 }: Props) {
   const busy = claimStatus === 'pending' || claimStatus === 'confirming';
 
-  let title = `加入 #${nextIndex} 号创世节点`;
+  let title = `认购 #${nextIndex} 号创世节点`;
   let body = `支付 ${NODE_PRICE_USDT.toLocaleString()} USDT，永久拥有 #${nextIndex} 号创世席位`;
-  let primaryLabel = '立即加入';
+  let primaryLabel = '立即认购';
   let onPrimary = onClaimClick;
   let primaryDisabled = !canClaim || busy;
 
@@ -41,13 +41,13 @@ export function ClaimPanel({
     onPrimary = () => {};
     primaryDisabled = true;
   } else if (isSoldOut) {
-    title = '创世节点已全部加入';
+    title = '创世节点已全部售出';
     body = '100 个名额已满，感谢您的关注。';
     primaryLabel = '';
     onPrimary = () => {};
     primaryDisabled = true;
   } else if (!walletConnected) {
-    title = '连接钱包，开始加入';
+    title = '连接钱包，开始认购';
     body = `支付 ${NODE_PRICE_USDT.toLocaleString()} USDT，获得 #${nextIndex} 号创世节点`;
     primaryLabel = '连接钱包';
     onPrimary = onConnect;
@@ -55,7 +55,7 @@ export function ClaimPanel({
   }
 
   return (
-    <section className="feature-card" aria-label="加入创世节点">
+    <section className="feature-card" aria-label="认购创世节点">
       <h2 className="feature-card__title">{title}</h2>
       <p className="feature-card__body">{body}</p>
       <div className="feature-card__actions">

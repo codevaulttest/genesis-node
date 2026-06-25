@@ -37,7 +37,7 @@ export function NodeCell({ index, allocation, isMine, isNext, isSelected, onSele
             ? `#${index}，归属 ${shortenAddress(allocation!.address)}`
             : isNext
               ? `下一个号码 #${index}`
-              : `#${index}，可加入`
+              : `#${index}，可认购`
       }
     >
       {isMine && <span className="node-cell__mine-tag">我的</span>}
@@ -45,7 +45,7 @@ export function NodeCell({ index, allocation, isMine, isNext, isSelected, onSele
       {claimed && !isMine && (
         <span className="node-cell__holder">{shortenAddress(allocation!.address, 4, 3)}</span>
       )}
-      {!claimed && <span className="node-cell__status">{isNext ? '下一个' : '可加入'}</span>}
+      {!claimed && <span className="node-cell__status">{isNext ? '下一个' : '可认购'}</span>}
     </button>
   );
 }

@@ -76,9 +76,9 @@ export function NodeDetailPanel({
               </div>
             </dl>
           ) : isNext ? (
-            <p className="detail-empty">这是下一个可加入的号码，支付后即可获得该编号。</p>
+            <p className="detail-empty">支付后，#${index} 号即永久属于您。</p>
           ) : (
-            <p className="detail-empty">这个号码还可以加入，连接钱包后参与。</p>
+            <p className="detail-empty">此编号仍可认购，连接钱包后操作。</p>
           )}
         </div>
 
@@ -90,10 +90,10 @@ export function NodeDetailPanel({
               </button>
             ) : canJoin ? (
               <button type="button" className="button-pill-cta" onClick={onJoin}>
-                立即加入
+                立即认购
               </button>
             ) : (
-              <p className="detail-empty detail-empty--hint">每个钱包只能加入 1 个创世节点。</p>
+              <p className="detail-empty detail-empty--hint">每个钱包限认购 1 个创世节点。</p>
             )}
           </div>
         )}

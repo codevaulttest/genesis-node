@@ -1,7 +1,7 @@
 import { TOTAL_NODES } from '../config';
 import type { GenesisAllocation } from '../types';
 
-/** 演示用钱包地址（DevPanel「我已加入」场景） */
+/** 演示用钱包地址（DevPanel「我已认购」场景） */
 export const DEMO_USER_ADDRESS =
   '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' as `0x${string}`;
 
@@ -37,7 +37,7 @@ export const DEMO_OPTIONS: { id: DemoScenarioId; label: string }[] = [
   { id: 'live', label: '↺ 默认 3/100' },
   { id: 'empty', label: '○ 空态 0/100' },
   { id: 'sold-out', label: '● 已满 100/100' },
-  { id: 'owned', label: '★ 我已加入 #12' },
+  { id: 'owned', label: '★ 我已认购 #12' },
   { id: 'loading', label: '… 加载中' },
   { id: 'claim-modal', label: '▢ 付款弹窗' },
   { id: 'claim-success', label: '✓ 付款成功' },
