@@ -1,0 +1,9 @@
+node_modules/
+dist/
+raw_context/
+*.local
+.DS_Store
+*.tsbuildinfo
+.firebase/
+.firebaserc
+firebase.json
